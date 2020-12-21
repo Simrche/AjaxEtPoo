@@ -1,0 +1,676 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: poppins;
+}
+
+/* CHAT */
+
+.chat {
+    position: absolute;
+    top: 200px;
+    left: -193px;
+    background-color: white;
+    display: flex;
+    height: 550px;
+    transition:all 0.5s;
+}
+
+.chatOpen {
+    position: absolute;
+    top: 200px;
+    left: 0;
+    background-color: white;
+    display: flex;
+    height: 550px;
+    transition:all 0.5s;
+}
+
+.chat li {
+    list-style: none;
+    word-break: break-all;
+}
+
+#bandeau {
+    width: 15px;
+    background-color: grey;
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+#message {
+    height: 85%;
+    overflow-y: scroll;
+}
+
+#message ul {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-left: 5px;
+}
+
+#chatPart {
+    width: 193px;
+    
+}
+
+#bandeau p {
+    word-break: break-all;
+    text-align: center;
+    color: white;
+    margin-top: 220px;
+}
+
+#message ul span {
+    color: red;
+}
+
+#formMessage form {
+    margin-top: 10px;
+}
+
+#formMessage p {
+    text-align: center;
+    width: 80%;
+    margin: 10px auto 0 auto;
+}
+
+/* MENU BURGER */
+
+#menu-burger {
+	font-size: 25px;
+	background: none;
+	border: none;
+	display: none;
+    cursor: pointer;
+    color: white;
+    margin-right: 50px;
+}
+
+#overlayBurger {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0 ,0, 0.4);
+	display: none;
+}
+
+#sidebar {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 35%;
+	z-index: 20;
+	height: 100%;
+    background-color: grey;
+}
+
+#sidebar-body {
+	padding: 16px 8px;
+}
+
+#sidebar-body li {
+	padding-top: 20px;
+	margin-right: 10px;
+}
+
+/* INDEX.PHP */
+
+#header {
+    background-image: url('../img/background.jpg');
+    background-attachment: fixed;
+    background-size: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#overlay {
+    display: none;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    opacity: 75%;
+    position: fixed;
+}
+
+#log {
+    display: flex;
+    margin-right: 1%;
+}
+
+.connexion {
+    position: fixed;
+    background-color: white;
+    top: 40%;
+    left: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: 250px;
+}
+
+.croix {
+    color: black;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.croix a {
+    margin-right: 15px;
+    font-size: 25px;
+    color: black;
+    background-color: grey;
+    border: solid 2px black;
+    padding: 0 8px;
+}
+
+.connexion h2 {
+    font-size: 25px;
+    color: black;
+    margin-bottom: 25px;
+}
+
+.connexion form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.connexion form div {
+    width: 100%;
+}
+
+.connexion input {
+    margin-top: 10px;
+    width: 200px;
+}
+
+.inscription {
+    position: fixed;
+    background-color: white;
+    top: 35%;
+    left: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+}
+
+.croix {
+    color: black;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.croix a {
+    margin-right: 15px;
+    font-size: 25px;
+    color: black;
+    background-color: grey;
+    border: solid 2px black;
+    padding: 0 8px;
+}
+
+.inscription h2 {
+    font-size: 25px;
+    color: black;
+    margin-bottom: 25px;
+}
+
+.inscription form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inscription input {
+    margin-top: 10px;
+    width: 200px;
+}
+
+#prono {
+    color: white;
+    margin-left: 2%;
+}
+
+#headerHeader {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+}
+
+#headerHeader h1 {
+    font-size: 50px;
+}
+
+#headerHeader ul {
+    display: flex;
+    color: white;
+}
+
+#headerHeader ul li {
+    list-style: none;
+    margin: 0 25px;
+}
+
+#headerHeader ul li a {
+    color: white;
+    font-size: 25px;
+    text-transform: uppercase;    
+}
+
+#headerHeader ul li a:hover {
+    border-bottom: white 2px solid;
+    transition: 0.3s;
+    padding-bottom: 5px;
+}
+
+#profil, #connect, #inscrip {
+    color: white;
+    font-size: 25px;
+    border: white 2px solid;
+    padding: 5px 20px;
+    margin-right: 2%;
+    text-transform: uppercase;
+}
+
+#profil:hover, #connect:hover, #inscrip:hover {
+    color: black;
+    background-color: white;
+    transition: 0.3s;
+}
+
+#headerMilieu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#headerMilieu h2 {
+    color: white;
+    font-size: 85px;
+    text-transform: uppercase;
+    margin-top: 150px;
+    text-align: center;
+}
+
+#headerMilieu p {
+    color: white;
+    font-size: 40px;
+    font-weight: 200;
+    font-style: italic;
+    width: 30%;
+    text-align: center;
+    margin-top: 150px;
+}
+
+#headerMilieu button {
+    color: white;
+    border: none;
+    border: solid white 2px;
+    padding: 10px 20px;
+    font-size: 25px;
+    margin-top: 100px;
+    background: none;
+    cursor: pointer;
+}
+
+#headerMilieu button:focus {
+    outline: 0;
+}
+
+#headerMilieu button:hover {
+    color: black;
+    background-color: white;
+    transition: 0.3s;
+}
+
+#championnat {
+    background-image: url('../img/backgroundSec.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 150px;
+}
+
+#championnat h3 {
+    font-size: 50px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+#championnat div {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#championnat img {
+    height: 250px;
+    margin-top: 50px;
+}
+
+#citation {
+    background-image: url('../img/background_2.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#citation p {
+    color: white;
+    font-size: 50px;
+    font-weight: 100;
+    font-style: italic;
+    width: 30%;
+    text-align: center;
+}
+
+#citation a {
+    color: white;
+    font-size: 25px;
+    padding: 10px 20px;
+    border: solid white 1px;
+    margin-top: 75px;
+    font-weight: 200;
+}
+
+#citation a:hover {
+    background-color: white;
+    color: black;
+}
+
+/* ----------------------------------- CHAMPIONNAT.HTML -------------------------------------------- */
+
+#championnats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+}
+
+#championnats h2 {
+    color: white;
+    font-size: 85px;
+}
+
+#blockChamp {
+    margin-top: 25px;
+}
+
+.container {
+    background-color: white;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    margin: 50px 50px 25px 50px;
+}
+
+.headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #707070;
+    color: white;
+    font-size: 25px;
+}
+
+.headerContainer h3 {
+    text-align: center;
+}
+
+.headerContainer img {
+    height: 30px;
+}
+
+.container p {
+    font-size: 25px;
+    text-align: center;
+    font-weight: 200;
+    font-style: italic;
+    margin-top: 40px;
+    height: 60px;
+}
+
+.inComming {
+    background-color: #0AA9EF;
+    color: white;
+    font-size: 25px;
+    text-transform: uppercase;
+    width: 180px;
+    text-align: center;
+    margin: 25px 0 0 50%;
+}
+
+.start {
+    background-color: #5A815A;
+    color: white;
+    font-size: 25px;
+    text-transform: uppercase;
+    width: 180px;
+    text-align: center;
+    margin: 25px 0 0 50%;
+}
+
+#blockChamp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* ----------------------------------- LIGUE 1 -------------------------------------------- */
+
+#ligue1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, .67);
+    width: 80%;
+    height: 700px;
+    margin-top: 75px;
+}
+
+#selectLigue1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ligue1 h2 {
+    font-size: 65px;
+}
+
+#choix {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+
+#choix p {
+    margin-top: 10px;
+}
+
+#choix input {
+    margin-left: 15px;
+    padding-left: 5px;
+    font-size: 20px;
+}
+
+#choix form label {
+    font-size: 20px;
+}
+
+#choix form div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#choix form div:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#choix form input[type=submit] {
+    font-size: 25px;
+    padding: 10px 20px;
+    border: solid black 1px;
+    font-weight: 200;
+    margin-top: 25px;
+}
+
+#choix form input[type=submit]:hover {
+    background-color: green;
+    color: white;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/* ----------------------------------- CONTACT.PHP -------------------------------------------- */
+
+#sectContact {
+    display: flex;
+    justify-content: center;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, .67);
+    width: 80%;
+    height: 700px;
+    margin-top: 75px;
+}
+
+#contact form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact form div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#contact h2 {
+    font-size: 65px;
+}
+
+#contact input[type=text] {
+    width: 70%;
+    height: 30px;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+#contact form input[type=submit] {
+    font-size: 25px;
+    padding: 10px 20px;
+    border: solid black 1px;
+    font-weight: 200;
+    margin-top: 25px;
+}
+
+#contact textarea {
+    width: 70%;
+    height: 300px;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+#contact form input[type=submit]:hover {
+    background-color: green;
+    color: white;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#recu {
+    color: white;
+    width: 100%;
+    text-align: center;
+    height: 25px;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1500px) {
+
+	header #nav {
+		display: none;
+	}
+
+	#menu-burger {
+		display: block;
+    }
+    
+    #headerHeader ul {
+        flex-direction: column;
+    }
+
+    #headerMilieu p {
+        width: 90%;
+    }
+
+    #citation p {
+        width: 90%;
+        font-size: 30px;
+    }
+
+    #citation {
+        background-repeat: repeat;
+    }
+
+    #log {
+        display: none;
+    }
+
+    #logBurger{
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #profil, #connect, #inscrip {
+        margin-top: 10px;
+    }
+
+    #sidebar-body ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    #sidebar {
+        width: 50%;
+    }
+}
